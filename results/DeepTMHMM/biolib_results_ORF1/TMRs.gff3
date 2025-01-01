@@ -1,0 +1,6 @@
+##gff-version 3
+# seq_L_lactis_lactis_ORF1_1 Length: 539
+# seq_L_lactis_lactis_ORF1_1 Number of predicted TMRs: 1
+seq_L_lactis_lactis_ORF1_1	inside	1	464				
+seq_L_lactis_lactis_ORF1_1	TMhelix	465	474				
+seq_L_lactis_lactis_ORF1_1	outside	475	539				

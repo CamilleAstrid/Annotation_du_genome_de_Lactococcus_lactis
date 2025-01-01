@@ -1,0 +1,19 @@
+GeneMark.hmm PROKARYOTIC (Version 3.42)
+Date: Fri Nov 29 04:52:54 2024
+Sequence file name: seq.fna
+Model file name: /home/genemark/parameters/prokaryotic/Lactococcus_lactis_Il1403/GeneMark_hmm_combined.mod
+RBS: true
+Model information: Lactococcus_lactis_Il1403
+
+FASTA definition line: seq_L_lactis_lactis
+Predicted genes
+   Gene    Strand    LeftEnd    RightEnd       Gene     Class
+    #                                         Length
+    1        +         174         347          174        2
+    2        +         455        3436         2982        2
+    3        +        3447        5249         1803        2
+    4        +        5242        6486         1245        2
+    5        +        6483        7220          738        2
+    6        +        7222        9270         2049        1
+    7        +        9475       >9555           81        1
+

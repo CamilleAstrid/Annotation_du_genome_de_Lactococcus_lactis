@@ -1,0 +1,3 @@
+# SignalP-5.0	Organism: Gram-positive	Timestamp: 20241130105320
+# ID	Prediction	SP(Sec/SPI)	TAT(Tat/SPI)	LIPO(Sec/SPII)	OTHER	CS Position
+seq_L_lactis_lactis_ORF6_1	OTHER	0.001969	0.000097	0.000325	0.997610	

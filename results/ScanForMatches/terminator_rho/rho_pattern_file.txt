@@ -1,0 +1,2 @@
+r1={AU,UA,GC,CG,GU,UG,GA,AG}
+p1 = 3...5 p2 = 3...10 3...9 r1~p2 ~p1 TTTTTT[1,0,0]
