@@ -1,0 +1,131 @@
+Nom de la methode : SourceVersion_GMH(input)
+
+Description : Extraire le nom de la source et la version depuis une chaîne d'entrée.
+En-tete : Retourne un tuple contenant deux chaînes de caractères (source, version).
+
+Variables locales :
+  - motif_sourceversion (expression reguliere)
+  - matchSourceversion (objet de correspondance)
+  - source, version (chaines de caracteres)
+
+Instructions :
+1. INITIALISER motif_sourceversion avec l'expression reguliere "(?P<source>.{24})(?P<other>.{10})(?P<version>\\d{1,2}\\.\\d{1,3})".
+2. RECHERCHER une correspondance de motif_sourceversion dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER source = valeur du groupe 'source'.
+      AFFECTER version = valeur du groupe 'version'.
+   SINON :
+      AFFECTER source = "".
+      AFFECTER version = "".
+4. RETOURNER (source, version).
+5. FIN (SourceVersion_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : Date_GMH(input)
+
+Description : Extraire la date depuis une chaîne d'entrée.
+En-tete : Retourne une chaîne représentant la date ou une chaîne vide.
+
+Variables locales :
+  - motif_date (expression reguliere)
+  - matchDate (objet de correspondance)
+  - date (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_date avec l'expression reguliere "(Date:)(?P<date>.{24,25})".
+2. RECHERCHER une correspondance de motif_date dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER date = valeur du groupe 'date'.
+   SINON :
+      AFFECTER date = "".
+4. RETOURNER date.
+5. FIN (Date_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : Seqfilename_GMH(input)
+
+Description : Extraire le nom du fichier de séquence depuis une chaîne d'entrée.
+En-tete : Retourne une chaîne représentant le nom du fichier ou une chaîne vide.
+
+Variables locales :
+  - motif_Seqfilename (expression reguliere)
+  - matchSeqfilename (objet de correspondance)
+  - Seqfilename (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_Seqfilename avec l'expression reguliere "(?P<Seqfilename>Sequence\\sfile\\sname:.{1,}\\.fna)".
+2. RECHERCHER une correspondance de motif_Seqfilename dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER Seqfilename = valeur du groupe 'Seqfilename'.
+   SINON :
+      AFFECTER Seqfilename = "".
+4. RETOURNER Seqfilename.
+5. FIN (Seqfilename_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : Model_GMH(input)
+
+Description : Extraire le nom du fichier modèle depuis une chaîne d'entrée.
+En-tete : Retourne une chaîne représentant le nom du fichier modèle ou une chaîne vide.
+
+Variables locales :
+  - motif_Model (expression reguliere)
+  - matchModel (objet de correspondance)
+  - Model (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_Model avec l'expression reguliere "(?P<Model>Model\\sfile\\sname:.{1,})".
+2. RECHERCHER une correspondance de motif_Model dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER Model = valeur du groupe 'Model'.
+   SINON :
+      AFFECTER Model = "".
+4. RETOURNER Model.
+5. FIN (Model_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : RBS_GMH(input)
+
+Description : Extraire les informations RBS depuis une chaîne d'entrée.
+En-tete : Retourne une chaîne représentant les informations RBS ou une chaîne vide.
+
+Variables locales :
+  - motif_RBS (expression reguliere)
+  - matchRBS (objet de correspondance)
+  - RBS (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_RBS avec l'expression reguliere "(?P<RBS>RBS:\\s\\w{4,5})".
+2. RECHERCHER une correspondance de motif_RBS dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER RBS = valeur du groupe 'RBS'.
+   SINON :
+      AFFECTER RBS = "".
+4. RETOURNER RBS.
+5. FIN (RBS_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : ModelInformation_GMH(input)
+
+Description : Extraire les informations du modèle depuis une chaîne d'entrée.
+En-tete : Retourne une chaîne représentant les informations du modèle ou une chaîne vide.
+
+Variables locales :
+  - motif_ModelInformation (expression reguliere)
+  - matchModelInformation (objet de correspondance)
+  - ModelInformation (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_ModelInformation avec l'expression reguliere "(?P<ModelInformation>Model\\sinformation:.{1,})".
+2. RECHERCHER une correspondance de motif_ModelInformation dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER ModelInformation = valeur du groupe 'ModelInformation'.
+   SINON :
+      AFFECTER ModelInformation = "".
+4. RETOURNER ModelInformation.
+5. FIN (ModelInformation_GMH).
