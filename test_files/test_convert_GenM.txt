@@ -1,0 +1,76 @@
+                              GENEMARK PREDICTIONS
+
+Sequence: seq_L_lactis_lactis
+Sequence file: seq.fna
+Sequence length: 9557
+GC Content:  31.57%
+Window length: 120
+Window step: 12
+Threshold value: 0.500
+---
+Matrix: Lactococcus_lactis_Il1403
+Matrix author: -
+Matrix order: 4
+
+List of Open reading frames predicted as CDSs, shown with alternate starts
+(regions from start to stop codon w/ coding function >0.50)
+
+Left      Right     DNA         Coding Avg   Start
+end       end       Strand      Frame  Prob  Prob
+--------  --------  ----------  -----  ----  ----
+
+     455      3436  direct      fr 2   0.55  0.02  
+     623      3436  direct      fr 2   0.56  0.03  
+     785      3436  direct      fr 2   0.57  0.03  
+     848      3436  direct      fr 2   0.57  0.05  
+    1310      3436  direct      fr 2   0.53  0.02  
+
+    3447      5249  direct      fr 3   0.63  0.75  
+    3456      5249  direct      fr 3   0.63  0.10  
+    3561      5249  direct      fr 3   0.65  0.37  
+    3630      5249  direct      fr 3   0.63  0.14  
+    3687      5249  direct      fr 3   0.63  0.31  
+
+    5230      6486  direct      fr 1   0.67  0.09  
+    5239      6486  direct      fr 1   0.68  0.90  
+    5242      6486  direct      fr 1   0.68  0.73  
+    5374      6486  direct      fr 1   0.71  0.00  
+    5653      6486  direct      fr 1   0.69  0.21  
+    5806      6486  direct      fr 1   0.69  0.92  
+    5827      6486  direct      fr 1   0.69  0.84  
+
+    6483      7220  direct      fr 3   0.53  0.02  
+    6507      7220  direct      fr 3   0.54  0.63  
+    6564      7220  direct      fr 3   0.58  0.01  
+    6696      7220  direct      fr 3   0.71  0.35  
+    6738      7220  direct      fr 3   0.72  0.25  
+    6789      7220  direct      fr 3   0.75  0.50  
+    6873      7220  direct      fr 3   0.78  0.18  
+    6939      7220  direct      fr 3   0.73  0.03  
+
+    7222      9270  direct      fr 1   0.89  0.15  
+    7279      9270  direct      fr 1   0.91  0.75  
+    7504      9270  direct      fr 1   0.91  0.00  
+    7792      9270  direct      fr 1   0.90  0.00  
+
+    9406      9558  direct      fr 1   0.51  0.45  
+    9409      9558  direct      fr 1   0.57  0.64  
+
+List of Regions of interest
+(regions from stop to stop codon w/ a signal in between)
+
+   LEnd      REnd    Strand      Frame
+ --------  --------  ----------- -----
+      425      3436  direct      fr 2
+     3444      5249  direct      fr 3
+     5185      6486  direct      fr 1
+     6453      7220  direct      fr 3
+     7210      9270  direct      fr 1
+
+
+--------------------
+ABOUT THE MATRIX USED:
+
+Training set derived by GeneMarkS, 4.27 September 2014
+Tue Sep 23 15:01:07 2014
+
