@@ -20,6 +20,7 @@ Les étapes principales incluent :
   - `man.py`: Manuel utilisation du programme Python.
   - `search_motif` : Module Python pour la création d'en-tête du fichier de sortie.
   - `search_data` : Module Python pour la conversion des informations au format GFF.
+  - **pseudocode/** : Scripts précédents écrits en pseudocode.
 - **data/** : Données utilisées pour l'analyse.
   - `seq_L_lactis_lactis.fasta` : Séquence génomique d'intérêt.
 - **results/** : Résultats générés par les outils d'analyse.
