@@ -1,0 +1,31 @@
+##gff-version 2
+##source-version ScanForMatches
+##date: Tue Dec 10 22:30:59 2024
+# Sequence file name: -
+# Model file name: -
+# RBS: True
+# Model information: -
+
+seq_L_lactis_lactis	ScanForMatches	RBS	161	176	.	+	.	note " GGAGG CACTCAAA ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	282	298	.	+	.	note " GGAGC TCTGATGGG TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	1802	1814	.	+	.	note " GGGGA TATCG TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	2317	2335	.	+	.	note " GGATG TAAATAGTAAG ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	2531	2549	.	+	.	note " GGAGA AAAGGGGAGAG TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	4581	4599	.	+	.	note " GGAGA ATTAACTGCTA TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	5497	5512	.	+	.	note " GGAGC AGCTGGCA TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	5611	5625	.	+	.	note " GAAGG ATTTAAT TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	5796	5808	.	+	.	note " GGAGA ATCAG ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	6340	6352	.	+	.	note " GGAGA TGAAA GTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	6367	6379	.	+	.	note " GAAGG AATAA GTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	6469	6485	.	+	.	note " GGAGG GAAGAGGAA ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	6836	6854	.	+	.	note " GGGGG CGGTCAAAGCT TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	6990	7005	.	+	.	note " GGAGA ATATCAGG ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	7067	7086	.	+	.	note " GGGGA GAATTGATAAGG ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	7205	7224	.	+	.	note " GAAGG TAGGAAACTAGA GTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	7449	7462	.	+	.	note " GGATG TAACTG GTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	7593	7606	.	+	.	note " GGATG AGCTAC TTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	7942	7954	.	+	.	note " GGAGA AAGCT ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	8071	8086	.	+	.	note " GGAGG GTTTGATA ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	8547	8566	.	+	.	note " GGATG TAATAGCCGTAG GTG "
+seq_L_lactis_lactis	ScanForMatches	RBS	8608	8626	.	+	.	note " GGAGC GGATGCAATTT ATG "
+seq_L_lactis_lactis	ScanForMatches	RBS	9397	9411	.	+	.	note " GGAGG TAAAGTG GTG "

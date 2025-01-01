@@ -1,0 +1,16 @@
+##gff-version 2
+##source-version GeneMark.hmm_PROKARYOTIC 3.42
+##date: Sun Dec  1 13:49:23 2024
+# Sequence file name: seq.fna
+# Model file name: /home/genemark/parameters/prokaryotic/Lactococcus_lactis_Il1403/GeneMark_hmm_combined.mod
+# RBS: true
+# Model information: Lactococcus_lactis_Il1403
+
+seq_L_lactis_lactis	GeneMark.hmm	CDS	174	347	1.803090	+	0	gene_id=1
+seq_L_lactis_lactis	GeneMark.hmm	CDS	455	3436	137.793554	+	0	gene_id=2
+seq_L_lactis_lactis	GeneMark.hmm	CDS	3447	5249	76.427574	+	0	gene_id=3
+seq_L_lactis_lactis	GeneMark.hmm	CDS	5242	6486	62.754081	+	0	gene_id=4
+seq_L_lactis_lactis	GeneMark.hmm	CDS	6483	7220	32.228663	+	0	gene_id=5
+seq_L_lactis_lactis	GeneMark.hmm	CDS	7222	9270	122.116214	+	0	gene_id=6
+seq_L_lactis_lactis	GeneMark.hmm	CDS	9475	9555	2.975958	+	0	gene_id=7
+

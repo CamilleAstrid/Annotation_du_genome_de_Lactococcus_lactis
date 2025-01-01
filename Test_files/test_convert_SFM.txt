@@ -1,0 +1,46 @@
+>seq_L_lactis_lactis:[161,176]
+GGAGG CACTCAAA ATG 
+>seq_L_lactis_lactis:[282,298]
+GGAGC TCTGATGGG TTG 
+>seq_L_lactis_lactis:[1802,1814]
+GGGGA TATCG TTG 
+>seq_L_lactis_lactis:[2317,2335]
+GGATG TAAATAGTAAG ATG 
+>seq_L_lactis_lactis:[2531,2549]
+GGAGA AAAGGGGAGAG TTG 
+>seq_L_lactis_lactis:[4581,4599]
+GGAGA ATTAACTGCTA TTG 
+>seq_L_lactis_lactis:[5497,5512]
+GGAGC AGCTGGCA TTG 
+>seq_L_lactis_lactis:[5611,5625]
+GAAGG ATTTAAT TTG 
+>seq_L_lactis_lactis:[5796,5808]
+GGAGA ATCAG ATG 
+>seq_L_lactis_lactis:[6340,6352]
+GGAGA TGAAA GTG 
+>seq_L_lactis_lactis:[6367,6379]
+GAAGG AATAA GTG 
+>seq_L_lactis_lactis:[6469,6485]
+GGAGG GAAGAGGAA ATG 
+>seq_L_lactis_lactis:[6836,6854]
+GGGGG CGGTCAAAGCT TTG 
+>seq_L_lactis_lactis:[6990,7005]
+GGAGA ATATCAGG ATG 
+>seq_L_lactis_lactis:[7067,7086]
+GGGGA GAATTGATAAGG ATG 
+>seq_L_lactis_lactis:[7205,7224]
+GAAGG TAGGAAACTAGA GTG 
+>seq_L_lactis_lactis:[7449,7462]
+GGATG TAACTG GTG 
+>seq_L_lactis_lactis:[7593,7606]
+GGATG AGCTAC TTG 
+>seq_L_lactis_lactis:[7942,7954]
+GGAGA AAGCT ATG 
+>seq_L_lactis_lactis:[8071,8086]
+GGAGG GTTTGATA ATG 
+>seq_L_lactis_lactis:[8547,8566]
+GGATG TAATAGCCGTAG GTG 
+>seq_L_lactis_lactis:[8608,8626]
+GGAGC GGATGCAATTT ATG 
+>seq_L_lactis_lactis:[9397,9411]
+GGAGG TAAAGTG GTG 
