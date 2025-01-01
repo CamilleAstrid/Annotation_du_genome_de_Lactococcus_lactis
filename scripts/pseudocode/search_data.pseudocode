@@ -1,0 +1,111 @@
+Nom de la methode : Seq_GMH(input)
+
+Description : Extrait la ligne de definition FASTA a partir des donnees GeneMarkHMM.
+En-tete : Retourne une chaine representant la sequence ou une chaine vide.
+
+Variables locales :
+  - motif_Seq (expression reguliere)
+  - matchSeq (objet de correspondance)
+  - Seq (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_Seq avec l'expression reguliere correspondante.
+2. RECHERCHER une correspondance de motif_Seq dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER Seq = valeur du groupe 'Seq'.
+   SINON :
+      AFFECTER Seq = "".
+4. RETOURNER Seq.
+5. FIN (Seq_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : Create_Tab_GMH(input)
+
+Description : Analyse les donnees GeneMarkHMM pour creer une table structuree des caracteristiques de sequence.
+En-tete : Retourne une liste contenant le nombre total de caracteristiques et un dictionnaire des details.
+
+Variables locales :
+  - tab (dictionnaire)
+  - n (entier initialise a 1)
+  - motifTab (expression reguliere)
+  - matchLine (objet de correspondance)
+
+Instructions :
+1. INITIALISER motifTab avec l'expression reguliere pour les caracteristiques de sequence.
+2. TANT QUE matchLine correspond a motifTab dans input :
+      AFFECTER Line avec [Strand, LeftEnd, RightEnd] des groupes de matchLine.
+      AJOUTER Line dans tab avec la cle (n-1).
+      INCREMENTER n.
+      METTRE A JOUR motifTab pour le prochain index n.
+3. RETOURNER [n-1, tab].
+4. FIN (Create_Tab_GMH).
+
+------------------------------------------------------------
+
+Nom de la methode : Seq_GM(input)
+
+Description : Extrait la ligne de sequence a partir des donnees GeneMark.
+En-tete : Retourne une chaine representant la sequence ou une chaine vide.
+
+Variables locales :
+  - motif_Seq (expression reguliere)
+  - matchSeq (objet de correspondance)
+  - Seq (chaine de caracteres)
+
+Instructions :
+1. INITIALISER motif_Seq avec l'expression reguliere correspondante.
+2. RECHERCHER une correspondance de motif_Seq dans input.
+3. SI une correspondance est trouvee :
+      AFFECTER Seq = valeur du groupe 'Seq'.
+   SINON :
+      AFFECTER Seq = "".
+4. RETOURNER Seq.
+5. FIN (Seq_GM).
+
+------------------------------------------------------------
+
+Nom de la methode : Create_Tab_GM(input)
+
+Description : Analyse les donnees GeneMark pour creer une table des informations de genes structurees.
+En-tete : Retourne une liste contenant le nombre total de genes valides et un tableau des details des genes.
+
+Variables locales :
+  - tab (liste)
+  - taille (entier initialise a 0)
+  - index, i (entiers)
+  - Line (liste de chaines de caracteres)
+  - motifTab (expression reguliere)
+  - matchLine (objet iterateur de correspondances)
+
+Instructions :
+1. INITIALISER motifTab avec l'expression reguliere pour les lignes de donnees GeneMark.
+2. POUR chaque element dans matchLine :
+      CALCULER strand en fonction du groupe 'Strand'.
+      AJOUTER Line dans tab avec les informations des groupes de correspondance.
+      INCREMENTER taille si Proba <= 1.
+3. OPTIMISER les probabilites pour marquer les "ATG" et gerer les annotations des genes.
+4. AJOUTER des copies pour les sequences "ATG" et ajuster les annotations des autres.
+5. RETOURNER [taille, tab].
+6. FIN (Create_Tab_GM).
+
+------------------------------------------------------------
+
+Nom de la methode : Create_Tab_SFM(input)
+
+Description : Analyse les donnees ScanForMatches pour creer une table des caracteristiques de sequence.
+En-tete : Retourne une liste contenant le nombre total de caracteristiques et un dictionnaire des details.
+
+Variables locales :
+  - tab (dictionnaire)
+  - n (entier initialise a 0)
+  - motifTab (expression reguliere)
+  - matchLine (objet iterateur de correspondances)
+
+Instructions :
+1. INITIALISER motifTab avec l'expression reguliere pour les caracteristiques de sequence.
+2. POUR chaque element dans matchLine :
+      AJOUTER une entree dans tab avec les details de la sequence, des extremites et des notes.
+      INCREMENTER n.
+3. RETOURNER [n, tab].
+4. FIN (Create_Tab_SFM).

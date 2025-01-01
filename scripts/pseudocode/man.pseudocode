@@ -1,0 +1,40 @@
+Nom de la methode : pause()
+
+Description : Pause l'execution du programme et attend une action de l'utilisateur.
+En-tete : Pas de retour.
+
+Variables locales :
+  - response (chaine de caracteres)
+
+Instructions :
+1. LIRE response avec le message : "Appuyez sur une touche pour continuer ou 'q' pour quitter".
+2. SUPPRIMER la ligne de saisie du terminal avec les commandes d'effacement du curseur.
+3. SI response en minuscules est egal a 'q' :
+      TERMINER le programme.
+4. FIN (pause).
+
+------------------------------------------------------------
+
+Nom de la methode : help()
+
+Description : Affiche un manuel utilisateur en plusieurs sections avec des pauses pour la lecture.
+En-tete : Pas de retour.
+
+Variables locales : Aucune.
+
+Instructions :
+1. AFFICHER le titre : "User Manual for 'convert_to_GFF.py'".
+2. AFFICHER les sections suivantes :
+   - Purpose : Explique le but du script et les formats pris en charge (GENM, GENMH, SFM).
+   - Features : Liste les fonctionnalites comme la validation des fichiers et le format de sortie GFF.
+   - Usage : Explique la syntaxe pour l'execution du script.
+   - Arguments : Detaille les arguments obligatoires et optionnels.
+   - Examples : Fournit des exemples d'utilisation pour les differents formats.
+   - Output : Decrit le contenu du fichier de sortie (annotations, metadonnees).
+   - Error Messages : Donne les messages d'erreur pour des arguments ou formats invalides.
+   - How It Works : Resume les etapes de traitement du script (initialisation, lecture, traitement, ecriture).
+   - Additional Modules : Liste les dependances et leurs fonctionnalites ('search_data.py', 'search_motif.py').
+   - Contact : Donne les informations pour contacter le developpeur.
+3. APPELER pause() apres chaque section.
+4. TERMINER le programme apres l'affichage complet.
+5. FIN (help).

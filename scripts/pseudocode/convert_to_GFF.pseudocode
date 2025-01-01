@@ -1,0 +1,234 @@
+Nom de la methode : Error_arg()
+
+Description : Affiche un message d'erreur pour arguments invalides ou insuffisants et termine le programme.
+En-tete : Pas de retour.
+
+Variables locales : Aucune.
+
+Instructions :
+1. TERMINER avec le message : "ERR_ARG ! Bad arguments given..."
+   suivi de la syntaxe correcte d'utilisation.
+2. FIN (Error_arg).
+
+------------------------------------------------------------
+
+Nom de la methode : Error_type()
+
+Description : Affiche un message d'erreur pour type de fichier invalide et termine le programme.
+En-tete : Pas de retour.
+
+Variables locales : Aucune.
+
+Instructions :
+1. TERMINER avec le message : "ERR_TYPE ! Wrong type given..."
+   suivi de la syntaxe correcte d'utilisation.
+2. FIN (Error_type).
+
+------------------------------------------------------------
+
+Nom de la methode : initialise()
+
+Description : Initialise les parametres en recuperant les arguments de la ligne de commande.
+En-tete : Retourne une liste : [filename, fileout, categorie, type].
+
+Variables locales :
+  - filename (chaine de caracteres)
+  - fileout (chaine de caracteres)
+  - categorie (chaine de caracteres)
+  - type (chaine de caracteres)
+
+Instructions :
+1. SI le nombre d'arguments est > 1 ET le premier argument est "--help" ou "-h" :
+      APPELER man.help().
+2. Sinon, essayer :
+      - AFFECTER type avec le 2e argument (converti en majuscules).
+      - AFFECTER filename avec le 3e argument.
+      - SI type == "SFM" :
+            AFFECTER categorie avec le 4e argument (converti en majuscules).
+            SI categorie != "RBS", "PROM", "TERM" :
+                  APPELER Error_arg().
+            TENTER d'affecter fileout avec le 5e argument ; sinon, "output.GFF".
+      - SINON :
+            AFFECTER categorie = "None".
+            TENTER d'affecter fileout avec le 4e argument ; sinon, "output.GFF".
+3. Retourner [filename, fileout, categorie, type].
+4. FIN (initialise).
+
+------------------------------------------------------------
+
+Nom de la methode : lire(files)
+
+Description : Lit le contenu d'un fichier specifie.
+En-tete : Retourne une chaine representant le contenu du fichier.
+
+Variables locales :
+  - filename (chaine de caracteres)
+  - input (chaine de caracteres)
+
+Instructions :
+1. AFFECTER filename avec le premier element de files.
+2. OUVRIR filename en mode lecture.
+3. LIRE le contenu du fichier et le stocker dans input.
+4. FERMER le fichier.
+5. Retourner input.
+6. FIN (lire).
+
+------------------------------------------------------------
+
+Nom de la methode : ecrire(files, input)
+
+Description : Ecrit les donnees traitees dans un fichier de sortie au format GFF.
+En-tete : Pas de retour.
+
+Variables locales :
+  - type (chaine de caracteres)
+
+Instructions :
+1. AFFECTER type avec le 4e element de files.
+2. SI type == "GENM" :
+      APPELER GeneMark(files, input).
+3. SINON SI type == "GENMH" :
+      APPELER GeneMarkHMM(files, input).
+4. SINON :
+      APPELER ScanForMatches(files, input).
+5. FIN (ecrire).
+
+------------------------------------------------------------
+
+Nom de la methode : ScanForMatches(files, input)
+
+Description : Traite et ecrit les donnees d'un fichier ScanForMatches au format GFF.
+En-tete : Pas de retour.
+
+Variables locales :
+  - fileout (chaine de caracteres)
+  - category (chaine de caracteres)
+  - RBS (booleen)
+  - Date (liste de chaines de caracteres)
+  - Info (liste contenant taille et DataFrame)
+  - taille (entier)
+  - DataFrame (tableau de donnees)
+
+Instructions :
+1. AFFECTER fileout avec le deuxieme element de files.
+2. AFFECTER category avec le troisieme element de files.
+3. SI category == "RBS" :
+      AFFECTER RBS = True.
+   SINON :
+      AFFECTER RBS = False.
+4. TENTER :
+      - EXTRAIRE Date en appelant Date().
+      - EXTRAIRE Info en appelant Create_Tab_SFM(input).
+      - AFFECTER taille avec Info[0] et DataFrame avec Info[1].
+   EN CAS D'ERREUR :
+      APPELER Error_type().
+5. OUVRIR fileout en mode ecriture.
+6. ECRIRE dans fileout :
+      - "##gff-version 2\n".
+      - "##source-version ScanForMatches".
+      - Date formatee avec :
+         "##date: " + Date[0] + " " + Date[1] + " " + Date[2] + " " + Date[3] + ":" + Date[4] + ":" + Date[5] + " " + Date[6].
+      - "# Sequence file name: -".
+      - "# Model file name: -".
+      - "# RBS: " + str(RBS).
+      - "# Model information: -\n\n".
+7. POUR chaque index dans [0, taille-1] :
+      ECRIRE dans fileout :
+         DataFrame[index][0] + "\tScanForMatches\t" + category + "\t" + DataFrame[index][1] + "\t" + DataFrame[index][2] + "\t.\t+\t.\tnote \" " + DataFrame[index][3] + "\"\n".
+8. FERMER fileout.
+9. FIN (ScanForMatches).
+
+------------------------------------------------------------
+
+Nom de la methode : GeneMark(files, input)
+
+Description : Traite et ecrit les donnees d'un fichier GeneMark au format GFF.
+En-tete : Pas de retour.
+
+Variables locales :
+  - fileout (chaine de caracteres)
+  - SourceVersion (chaine de caracteres)
+  - Date (liste de chaines de caracteres)
+  - Seqfilename (chaine de caracteres)
+  - ModelInformation (chaine de caracteres)
+  - Seq (chaine de caracteres)
+  - Info (liste contenant taille et DataFrame)
+  - taille (entier)
+  - DataFrame (tableau de donnees)
+
+Instructions :
+1. AFFECTER fileout avec le deuxieme element de files.
+2. TENTER :
+      - EXTRAIRE SourceVersion en appelant SourceVersion_GM(input).
+      - EXTRAIRE Date en appelant Date().
+      - EXTRAIRE Seqfilename en appelant Seqfilename_GM(input).
+      - EXTRAIRE ModelInformation en appelant ModelInformation_GM(input).
+      - EXTRAIRE Seq en appelant Seq_GM(input).
+      - EXTRAIRE Info en appelant Create_Tab_GM(input).
+      - AFFECTER taille avec Info[0] et DataFrame avec Info[1].
+   EN CAS D'ERREUR :
+      APPELER Error_type().
+3. OUVRIR fileout en mode ecriture.
+4. ECRIRE dans fileout :
+      - "##gff-version 2\n".
+      - "##source-version GeneMark " + SourceVersion.
+      - Date formatee avec :
+         "##date: " + Date[0] + " " + Date[1] + " " + Date[2] + " " + Date[3] + ":" + Date[4] + ":" + Date[5] + " " + Date[6].
+      - "# " + Seqfilename.
+      - "# Model file name: -".
+      - "# RBS: -".
+      - "# Model information: " + ModelInformation + "\n\n".
+5. POUR chaque index dans [0, taille-1] :
+      ECRIRE dans fileout :
+         Seq + "\tGeneMark\t" + DataFrame[index][6] + "\t" + str(DataFrame[index][1]) + "\t" + str(DataFrame[index][2]) + "\t?\t" + DataFrame[index][0] + "\t.\t" + str(DataFrame[index][7]).
+6. FERMER fileout.
+7. FIN (GeneMark).
+
+------------------------------------------------------------
+
+Nom de la methode : GeneMarkHMM(files, input)
+
+Description : Traite et ecrit les donnees d'un fichier GeneMarkHMM au format GFF.
+En-tete : Pas de retour.
+
+Variables locales :
+  - fileout (chaine de caracteres)
+  - SourceVersion (liste de deux chaines de caracteres)
+  - Date (chaine de caracteres)
+  - Seqfilename (chaine de caracteres)
+  - Model (chaine de caracteres)
+  - RBS (chaine de caracteres)
+  - ModelInformation (chaine de caracteres)
+  - Seq (chaine de caracteres)
+  - Info (liste contenant taille et DataFrame)
+  - taille (entier)
+  - DataFrame (tableau de donnees)
+
+Instructions :
+1. AFFECTER fileout avec le deuxieme element de files.
+2. TENTER :
+      - EXTRAIRE SourceVersion en appelant SourceVersion_GMH(input).
+      - EXTRAIRE Date en appelant Date_GMH(input).
+      - EXTRAIRE Seqfilename en appelant Seqfilename_GMH(input).
+      - EXTRAIRE Model en appelant Model_GMH(input).
+      - EXTRAIRE RBS en appelant RBS_GMH(input).
+      - EXTRAIRE ModelInformation en appelant ModelInformation_GMH(input).
+      - EXTRAIRE Seq en appelant Seq_GMH(input).
+      - EXTRAIRE Info en appelant Create_Tab_GMH(input).
+      - AFFECTER taille avec Info[0] et DataFrame avec Info[1].
+   EN CAS D'ERREUR :
+      APPELER Error_type().
+3. OUVRIR fileout en mode ecriture.
+4. ECRIRE dans fileout :
+      - "##gff-version 2\n".
+      - "##source-version " + SourceVersion[0] + " " + SourceVersion[1].
+      - "##date: " + Date.
+      - "# " + Seqfilename.
+      - "# " + Model.
+      - "# " + RBS.
+      - "# " + ModelInformation + "\n\n".
+5. POUR chaque index dans [0, taille-1] :
+      ECRIRE dans fileout :
+         Seq + "_" + str((index+1)) + "\tGeneMark.hmm\tCDS\t" + DataFrame[index][1] + "\t" + DataFrame[index][2] + "\t?\t" + DataFrame[index][0] + "\t.\tgene GMH_CDS_" + str((index+1)).
+6. FERMER fileout.
+7. FIN (GeneMarkHMM).
