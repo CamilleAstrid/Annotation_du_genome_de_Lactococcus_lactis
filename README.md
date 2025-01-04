@@ -89,7 +89,7 @@ Les étapes principales incluent :
 
 ## Licence
 
-Ce projet est sous licence [MIT](LICENSE).
+Ce projet et donc l'ensemble des éléments de ce répertoire est sous licence [MIT](LICENSE) (sauf cas précisé).
 
 ## Références
 
