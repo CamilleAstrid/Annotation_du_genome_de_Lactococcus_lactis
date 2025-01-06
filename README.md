@@ -1,6 +1,6 @@
 # Annotation génomique de *Lactococcus lactis*
 
-Ce dépôt contient le code, les données et les résultats associés à l'annotation bioinformatique d'un fragment du génome de *Lactococcus lactis*. Ce projet a été réalisé dans le cadre du Master 1 Bioinformatique et Biologie des Systèmes à l'Université Paul Sabatier Toulouse III, année universitaire 2024-2025.
+Ce dépôt contient le code, les données et les résultats associés à l'annotation bioinformatique d'un fragment du génome de *Lactococcus lactis*. Ce projet a été réalisé dans le cadre du Master 1 Bioinformatique et Biologie des Systèmes à l'Université Paul Sabatier Toulouse III (Universités de Toulouse, FRANCE), année universitaire 2024-2025.
 
 ## Description du projet
 
