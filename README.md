@@ -60,8 +60,8 @@ Les étapes principales incluent :
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/<votre-dépôt>.git
-   cd <votre-dépôt>
+   git clone https://github.com/CamilleAstrid/Annotation_du_genome_de_Lactococcus_lactis
+   cd Annotation_du_genome_de_Lactococcus_lactis
    ```
 2. Assurez-vous d'avoir Python et les dépendances nécessaires installés.
 3. Exécutez les scripts pour reproduire les analyses :
